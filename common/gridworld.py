@@ -57,6 +57,10 @@ class GridWorld:
     
     def reward(self, state, action, next_state):
         return self.reward_map[next_state]
+    
+    def reset(self):
+        self.agent_state = self.start_state
+        return self.agent_state
 
     def step(self, action):
         state = self.agent_state
